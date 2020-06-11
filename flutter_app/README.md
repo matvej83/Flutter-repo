@@ -1,6 +1,6 @@
-# flutterappmicard
+# flutterapp
 
-This simple Flutter application demonstrates how to use fonts, colors and saved images.
+This simple flutter application is an example of web images using.
 
 ## About
 
