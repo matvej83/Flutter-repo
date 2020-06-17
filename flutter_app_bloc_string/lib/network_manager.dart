@@ -3,10 +3,10 @@ import 'package:http/http.dart' as http;
 
 class NetworkManager {
   fetchUser() async {
-    var url = 'https://jsonplaceholder.typicode.com/posts/7';
+    var url = 'https://jsonplaceholder.typicode.com/posts/5';
 
     // Await the http get response, then decode the json-formatted response.
-    print(' getting user data for user with id=15...');
+    print(' getting user data for user with id=5...');
     var response = await http.get(url);
     if (response.statusCode == 200) {
       var jsonResponse = convert.jsonDecode(response.body);

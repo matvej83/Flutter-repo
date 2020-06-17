@@ -10,7 +10,7 @@ class IncreaseCounter extends CounterBlocEvent {
   final int increment;
 
   @override
-  List<Object> get props => [increment];
+  List<Object> get props => [];
 }
 
 class DecreaseCounter extends CounterBlocEvent {

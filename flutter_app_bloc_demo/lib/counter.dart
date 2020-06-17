@@ -32,7 +32,7 @@ class CounterTest extends StatelessWidget {
                         textColor: Colors.black,
                         onPressed: () {
                           BlocProvider.of<CounterBlocBloc>(context)
-                              .add(IncreaseCounter(increment: 1));
+                              .add(IncreaseCounter());
                         },
                         child: Text("increase"),
                       )),
@@ -43,7 +43,7 @@ class CounterTest extends StatelessWidget {
                         textColor: Colors.black,
                         onPressed: () {
                           BlocProvider.of<CounterBlocBloc>(context)
-                              .add(DecreaseCounter(decrement: 1));
+                              .add(DecreaseCounter());
                         },
                         child: Text("decrease"),
                       )),
