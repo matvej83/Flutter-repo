@@ -10,11 +10,12 @@ part 'custom_bloc_event.dart';
 part 'custom_bloc_state.dart';
 
 class CustomBlocBloc extends Bloc<CustomBlocEvent, CustomBlocState> {
-  PostUsers isString;
+  String notLoaded = 'No data has been loaded!';
   NetworkManager networkManager = NetworkManager();
 
   @override
-  CustomBlocState get initialState => CustomBlocInitial(initialState: isString);
+  CustomBlocState get initialState =>
+      CustomBlocInitial(initialState: notLoaded);
 
   @override
   Stream<CustomBlocState> mapEventToState(

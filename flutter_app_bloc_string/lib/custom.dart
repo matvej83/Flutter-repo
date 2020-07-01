@@ -29,7 +29,9 @@ class CounterTest extends StatelessWidget {
                   padding: EdgeInsets.all(5),
                   child: BlocBuilder<CustomBlocBloc, CustomBlocState>(
                     builder: (context, state) {
-                      if (state is CustomState) {
+                      if (state is CustomBlocInitial) {
+                        return onLoad(context, state.initialState);
+                      } else if (state is CustomState) {
                         return getData(context, state.listPostUsers);
                       } else {
                         return Container();
@@ -43,6 +45,10 @@ class CounterTest extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  onLoad(context, String notLoaded) {
+    return Text('$notLoaded');
   }
 
   getData(context, PostUsers listPostUsers) {

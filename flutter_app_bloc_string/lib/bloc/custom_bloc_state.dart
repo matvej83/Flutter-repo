@@ -7,7 +7,7 @@ abstract class CustomBlocState extends Equatable {
 class CustomBlocInitial extends CustomBlocState {
   const CustomBlocInitial({this.initialState});
 
-  final PostUsers initialState;
+  final String initialState;
 
   @override
   List<Object> get props => [initialState];
